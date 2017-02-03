@@ -68,7 +68,7 @@ var bio = {
     "mobile" : "513 405 5183",
     "email" : "TraviseMikolay@gmail.com",
     "github" : "https://github.com/TheTravisM",
-    // add linkedIn with a hyperlink
+    /// add linkedIn with a hyperlink
     "linkedIn": "#",
     "twitter" : "",
     "location" : "Rogers, AR"
