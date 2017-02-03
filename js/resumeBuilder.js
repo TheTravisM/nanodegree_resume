@@ -28,9 +28,11 @@ var work = {
 var projects = {
     "projects" : [
       {
-        "title" : "Project 1",
+        "title" : "Health Care App",
         "dates" : "2001",
         "description" : "Project 1 Description",
+        "github": "https://github.com/KickAssBrockSamson/AngularJS-HealthCare-UI",
+        "url": "https://github.com/KickAssBrockSamson/AngularJS-HealthCare-UI",
         "images" : [
           "https://placehold.it/350x150",
           "https://placehold.it/350x150",
@@ -38,25 +40,30 @@ var projects = {
         ]
       },
       {
-        "title" : "Project 2",
-        "dates" : "2001",
-        "description" : "Project 2 Description",
-        "images" : [
-          "https://placehold.it/350x150",
-          "https://placehold.it/350x150",
-          "https://placehold.it/350x150"
-        ]
-      },
-      {
-        "title" : "Project 3",
+        "title" : "Oracle Workbench App",
         "dates" : "2001",
         "description" : "Project 3 Description",
+        "github" : "https://github.com/KickAssBrockSamson/Functional-Design-Workbench",
+        "url" : "http://kickassbrocksamson.github.io/Functional-Design-Workbench/#/",
+        "images" : [
+          "https://placehold.it/350x150",
+          "https://placehold.it/350x150",
+          "https://placehold.it/350x150"
+        ]
+      },
+      {
+        "title" : "Web Development Guidelines",
+        "dates" : "2001",
+        "description" : "Project 2 Description",
+        "github" : "https://github.com/KickAssBrockSamson/Web-Development-Guidelines",
+        "url" : "http://kickassbrocksamson.github.io/Web-Development-Guidelines/",
         "images" : [
           "https://placehold.it/350x150",
           "https://placehold.it/350x150",
           "https://placehold.it/350x150"
         ]
       }
+
     ]
 };
 
@@ -95,7 +102,7 @@ var education = {
       "location" : "Cincinnati, OH",
       "degree": "BFA",
       "dates": '1998',
-      "url": "",
+      "url": "http://www.msj.edu/",
       "majors": ["Fine Arts Graphic Design"],
       "minors": ["Illustration", "iDesign"]
     },
@@ -232,12 +239,16 @@ var displayProjects = function() {
 projects.display = function() {
   projects.projects.forEach(function(project) {
     $("#projects").append(HTMLprojectStart);
+    var formattedUrl = HTMLprojectUrl.replace("%data%", project.url);
+    $(".project-entry:last").append(formattedUrl);
     var formattedTitle = HTMLprojectTitle.replace("%data%", project.title);
-    $(".project-entry:last").append(formattedTitle);
+    $("h3.project-title a:last").append(formattedTitle);
     var formattedDates = HTMLprojectDates.replace("%data%", project.dates);
     $(".project-entry:last").append(formattedDates);
     var formattedDescription = HTMLprojectDescription.replace("%data%", project.description);
     $(".project-entry:last").append(formattedDescription);
+    var formattedGitHub = HTMLprojectGitHub.replace("%data%", project.description);
+    $(".project-entry:last").append(formattedGitHub);
     if (project.images.length > 0 ) {
       project.images.forEach(function(image){
         var formattedImage = HTMLprojectImage.replace("%data%", image);
@@ -278,7 +289,15 @@ education.display = function() {
     }
   });
   education.onlineCources.forEach(function(course){
-
+      $("#education").append(HTMLonlineClasses);
+      var formattedTitle = HTMLonlineTitle.replace("%data%", course.title);
+      $(".education-entry:last").append(formattedLocation);
+      var formattedSchool = HTMLonlineSchool.replace("%data%", course.school);
+      $(".education-entry:last").append(formattedLocation);
+      var formattedDates = HTMLonlineDates.replace("%data%", course.dates);
+      $(".education-entry:last").append(formattedLocation);
+      var formattedURL = HTMLonlineURL.replace("%data%", course.url);
+      $(".education-entry:last").append(formattedLocation);
   });
 };
 education.display();
