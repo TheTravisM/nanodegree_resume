@@ -50,10 +50,11 @@ var HTMLschoolMinor = '<em><br>Minor: %data%</em>';
 
 // Online Classes
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#">%data%';
-var HTMLonlineSchool = ' - %data%</a>';
+var HTMLonlineURL = '<h4 class="online-title"><a href="%data%"></a></h4>';
+var HTMLonlineTitle = '%data%';
+var HTMLonlineSchool = '<p>%data%</p>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
+
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
@@ -89,8 +90,6 @@ $(document).click(function(loc) {
   // your code goes here!
 });
 
-
-
 /*
 This is the fun part. Here's where we generate the custom Google Map for the website.
 See the documentation below for more details.
@@ -110,10 +109,8 @@ function initializeMap() {
     disableDefaultUI: true
   };
 
-  /*
-  For the map to be displayed, the googleMap var must be
-  appended to #mapDiv in resumeBuilder.js.
-  */
+  // For the map to be displayed, the googleMap var must be appended to #mapDiv in resumeBuilder.js.
+
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
 
@@ -177,6 +174,8 @@ function initializeMap() {
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
+      // TM Added Code from video
+      infoWindow.open(map, marker);
       // your code goes here!
     });
 
@@ -245,6 +244,5 @@ Uncomment the code below when you're ready to implement a Google Map!
 // and adjust map bounds
 window.addEventListener('resize', function(e) {
   //Make sure the map bounds get updated on page resize
- // UNCOMMENT THIS map.fitBounds(mapBounds);!!!!!
- //map.fitBounds(mapBounds);
+ map.fitBounds(mapBounds);
 });

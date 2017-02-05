@@ -288,16 +288,19 @@ education.display = function() {
       });
     }
   });
+  if(education.onlineCources.length > 0 ){
+    $(".education-entry:last").append(HTMLonlineClasses);
+  }
   education.onlineCources.forEach(function(course){
-      $("#education").append(HTMLonlineClasses);
-      var formattedTitle = HTMLonlineTitle.replace("%data%", course.title);
-      $(".education-entry:last").append(formattedLocation);
-      var formattedSchool = HTMLonlineSchool.replace("%data%", course.school);
-      $(".education-entry:last").append(formattedLocation);
-      var formattedDates = HTMLonlineDates.replace("%data%", course.dates);
-      $(".education-entry:last").append(formattedLocation);
       var formattedURL = HTMLonlineURL.replace("%data%", course.url);
-      $(".education-entry:last").append(formattedLocation);
+      $(".education-entry:last").append(formattedURL);
+      var formattedTitle = HTMLonlineTitle.replace("%data%", course.title);
+      $("h4.online-title a:last").append(formattedTitle);
+      var formattedSchool = HTMLonlineSchool.replace("%data%", course.school);
+      $(".education-entry:last").append(formattedSchool);
+      var formattedDates = HTMLonlineDates.replace("%data%", course.dates);
+      $(".education-entry:last").append(formattedDates);
+
   });
 };
 education.display();
