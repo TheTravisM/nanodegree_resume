@@ -3,12 +3,11 @@ var bio = {
     "name" : "Travis Mikolay",
     "role" : "Front End Web Developer",
     "contacts" : {
-        "mobile" : "513 405 5183",
+        "mobile" : "513.405.5183",
         "email" : "TraviseMikolay@gmail.com",
         "github" : "https://github.com/TheTravisM",
-        /// add linkedIn with a hyperlink
-        "linkedIn": "#",
-        "twitter" : "",
+        "linkedin": "https://www.linkedin.com/in/travismikolay/",
+        "twitter" : "#",
         "location" : "Rogers, AR"
     },
     "welcomeMessage" : "WelcomeMessage",
@@ -31,6 +30,7 @@ var work = {
         {
             "employer" : "JB Hunt",
             "title" : "Senior Software Programming Specialist",
+            "logo" : "images/jobs/jbhunt.png",
             "url" : "http://www.jbhunt.com/",
             "location" :"Rogers, Ar",
             "dates" :"2016-2017",
@@ -38,11 +38,39 @@ var work = {
         },
         {
             "employer" : "Cengage Learning",
-            "title" : "Senior Web Developer",
+            "title" : "Senior Front End App Developer",
+            "logo" : "images/jobs/cengage.png",
             "url" : "http://www.cengage.com/",
             "location" : "Cincinnati, Ohio",
             "dates" : "2012-2016",
-            "description" : "Job Description"
+            "description" : "Web Accessibility Compliance, HTML5, CCS3, JQuery, JavaScript, SEO, Social Media"
+        },
+        {
+            "employer" : "RDI Corp",
+            "title" : "Senior Web Developer",
+            "logo" : "images/jobs/rdi.png",
+            "url" : "http://rdicorp.com/",
+            "location" : "Cincinnati, Ohio",
+            "dates" : "2009-2010",
+            "description" : "• Spearheaded the creation of dynamic web sites for RDI and sister companies <br>• Worked with a team of programmers in a fast paced environment <br>• Created dynamic websites for the ground up for RDI and well as many of the companies that they had worked with."
+        },
+        {
+            "employer" : "Definity Partners",
+            "title" : "Web Developer",
+            "logo" : "images/jobs/definity.png",
+            "url" : "http://www.definitypartners.com/",
+            "location" : "Cincinnati, Ohio",
+            "dates" : "2009-2010",
+            "description" : "• Spearheaded the creation of dynamic web sites for RDI and sister companies <br>• Worked with a team of programmers in a fast paced environment <br>• Created dynamic websites for the ground up for RDI and well as many of the companies that they had worked with."
+        },
+        {
+            "employer" : "College of Mount St. Joseph",
+            "title" : "Web Developer",
+            "logo" : "images/jobs/msj.png",
+            "url" : "www.msj.edu/",
+            "location" : "Cincinnati, Ohio",
+            "dates" : "2009-2010",
+            "description" : "• Spearheaded the creation of dynamic web sites for RDI and sister companies <br>• Worked with a team of programmers in a fast paced environment <br>• Created dynamic websites for the ground up for RDI and well as many of the companies that they had worked with."
         }
     ]
 };
@@ -180,52 +208,57 @@ var education = {
 // - - [ Bio Pic Column 1
 var formattedHTMLbioPic = HTMLbioPic.replace("%data%",bio.biopic);
 $("#header .column-1").append(formattedHTMLbioPic);
-var formattedHTMLwelcomeMsg = HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage);
-$("#header .column-1").append(formattedHTMLwelcomeMsg);
 
-// - - [ Contact Info
+// - - [ Contact Info Column 2
 var formattedName = HTMLheaderName.replace("%data%",bio.name);
 $("#header .bio").append(formattedName);
 var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
 $("#header .bio").append(formattedRole);
 
-// - - [ Contacts
+// - - [ Contact Info
 var formattedHTMLmobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
 $("#topContacts").append(formattedHTMLmobile);
+$("#topContacts li.mobile a:last").append(bio.contacts.mobile);
 var formattedHTMLemail = HTMLemail.replace("%data%", bio.contacts.email);
 $("#topContacts").append(formattedHTMLemail);
-//var formattedHTMLtwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-//$("#topContacts").append(formattedHTMLtwitter);
+$("#topContacts li.email a:last").append(bio.contacts.email);
+var formattedHTMLlinkedin = HTMLlinkedin.replace("%data%", bio.contacts.linkedin);
+$("#topContacts").append(formattedHTMLlinkedin);
+$("#topContacts li.linkedin a:last").append(bio.contacts.linkedin);
 var formattedHTMLgithub = HTMLgithub.replace("%data%", bio.contacts.github);
 $("#topContacts").append(formattedHTMLgithub);
-//var formattedHTMLblog = HTMLblog.replace("%data%", bio.contacts.blog);
-//$("#topContacts").append(formattedHTMLblog);
+$("#topContacts li.github a:last").append(bio.contacts.github);
 var formattedHTMLlocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#topContacts").append(formattedHTMLlocation);
+// -- [ Message
+var formattedHTMLwelcomeMsg = HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage);
+$("#topContacts").after(formattedHTMLwelcomeMsg);
 
-// Bio SKILLS If Statement
+// - [ Bio SKILLS If Statement
 $("#header .skills").append(HTMLskillsStart);
 for (var skill in bio.skills) {
     formattedSkill = HTMLskills.replace("%data%",bio.skills[skill]);
     $("#skills").append(formattedSkill);
 }
 
-// WORK: For-In Loop
+// - [ WORK
 function displayWork() {
     work.jobs.forEach(function(job) {
-        $("#workExperience .container .row").append(HTMLworkStart);
+        $("#workExperience .container").append(HTMLworkStart);
         var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
-        $(".work-entry:last").append(formattedTitle);
-        var formattedUrl = HTMLworkURL.replace("%data", job.url);
-        $(".work-entry:last").append(formattedUrl);
+        $(".work-entry:last .column-2").append(formattedTitle);
+        var formattedLogo = HTMLworkLogo.replace("%data%", job.logo);
+        $(".work-entry:last .column-1").append(formattedLogo);
+        var formattedUrl = HTMLworkURL.replace("%data%", job.url);
+        $(".work-entry:last .column-2").append(formattedUrl);
         var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
-        $(".work-link:last").append(formattedEmployer);
+        $(".work-entry:last .work-link").append(formattedEmployer);
         var formattedDates = HTMLworkDates.replace("%data%", job.dates);
-        $(".work-entry:last").append(formattedDates);
+        $(".work-entry:last .column-2").append(formattedDates);
         var formattedWorkLocation = HTMLworkLocation.replace("%data%", job.location);
-        $(".work-entry:last").append(formattedWorkLocation);
+        $(".work-entry:last .column-2").append(formattedWorkLocation);
         var formattedWorkDescription = HTMLworkDescription.replace("%data%", job.description);
-        $(".work-entry:last").append(formattedWorkDescription);
+        $(".work-entry:last .column-2").append(formattedWorkDescription);
     });
 }
 displayWork();
@@ -255,10 +288,6 @@ projects.display = function() {
 projects.display();
 
 // - [ Education - "School"s
-var displayEducation = function() {
-    // code
-};
-
 education.display = function() {
     education.schools.forEach(function(school){
         $("#education .container .row").append(HTMLschoolStart);
@@ -300,16 +329,7 @@ education.display = function() {
 };
 education.display();
 
-// internationalizeButton
-function inName(name){
-    name = name.trim().split(" ");
-    name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
-    name[1] = newName[1].toUppercase();
 
-    return name[0] + " " + name[1];
-}
-$("#main").append(internationalizeButton);
-
-// You want to see a map?
+// -- [ Google Map
 $("#mapDiv").append(googleMap);
 

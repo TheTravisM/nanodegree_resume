@@ -9,11 +9,11 @@ var HTMLheaderRole = '<p>%data%</p><ul id="topContacts" class="list-unstyled"></
 // Contacts
 //var HTMLcontactStart = '';
 var HTMLcontactGeneric = '<li class="flex-item">%contact% <span>%data%</span></li>';
-var HTMLmobile = '<li class="flex-item mobile"><i class="fa fa-phone"></i>mobile: <span>%data%</span></li>';
-var HTMLemail = '<li class="flex-item email"><i class="fa fa-envelope"></i>email: <span>%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item twitter"><i class="fa fa-twitter"></i>twitter: <span>%data%</span></li>';
-var HTMLgithub = '<li class="flex-item github"><i class="fa fa-github"></i>github: <span>%data%</span></li>';
-var HTMLgithub = '<li class="flex-item linkedin"><i class="fa fa-linkedin"></i>linkedin: <span>%data%</span></li>';
+var HTMLmobile = '<li class="flex-item mobile"><i class="fa fa-phone"></i>mobile: <a href="tel:%data%"></a></li>';
+var HTMLemail = '<li class="flex-item email"><i class="fa fa-envelope"></i>email: <a href="mailto: %data%"></a>';
+var HTMLtwitter = '<li class="flex-item twitter"><i class="fa fa-twitter"></i>twitter: <a href="%data%"></a></li>';
+var HTMLgithub = '<li class="flex-item github"><i class="fa fa-github"></i>github: <a href="%data%"></a></li>';
+var HTMLlinkedin = '<li class="flex-item linkedin"><i class="fa fa-linkedin"></i>linkedin: <a href="%data%"></a></li>';
 var HTMLblog = '<li class="flex-item blog"><i class="fa fa-globe"></i>blog: <span>%data%</span></li>';
 var HTMLlocation = '<li class="flex-item location"><i class="fa fa-globe"></i>location: <span>%data%</span></li>';
 
@@ -25,11 +25,15 @@ var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance</h3><ul id="skills"
 var HTMLskills = '<li>%data%</li>';
 
 // Work
-var HTMLworkStart = '<div class="work-entry col-md-12"></div>';
+var HTMLworkStart = '<div class="row work-entry">' +
+    '<div class="col-sm-2 column-1"></div>' +
+    '<div class="col-sm-10 column-2"></div>' +
+    '</div>';
+var HTMLworkLogo = '<img src="%data%" class="img-responsive center-block">';
 var HTMLworkTitle = '<h3>%data%</h3>';
-var HTMLworkURL = '<a class="work-link" href="%data%">';
-var HTMLworkEmployer = '%data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
+var HTMLworkURL = '<h4><a class="work-link" href="%data%"></a></h4>';
+var HTMLworkEmployer = '%data%';
+var HTMLworkDates = '<small class="date-text">%data%</small>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p>%data%</p>';
 
@@ -52,7 +56,7 @@ var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 var HTMLschoolMinor = '<em><br>Minor: %data%</em>';
 
 // Online Classes
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
+var HTMLonlineClasses = '<h3 class="page-header"><i class="fa fa-wifi" aria-hidden="true"></i>Online Classes</h3>';
 var HTMLonlineURL = '<h4 class="online-title"><a href="%data%"></a></h4>';
 var HTMLonlineTitle = '%data%';
 var HTMLonlineSchool = '<p>%data%</p>';
@@ -241,7 +245,7 @@ Uncomment the code below when you're ready to implement a Google Map!
 */
 
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
