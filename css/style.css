@@ -1,13 +1,39 @@
 * {
   font-family: 'Open Sans', sans-serif;
+  -webkit-transition: all .25s linear;
+  -moz-transition: all .25s linear;
+  -ms-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  transition: all .25s linear;
+}
+
+*:before,
+*:after {
+  -webkit-transition: all .25s linear;
+  -moz-transition: all .25s linear;
+  -ms-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  transition: all .25s linear;
 }
 
 img {
   max-width: 100%;
 }
 
+a {
+  color: #98cb32;
+}
+
+a:hover {
+  color: #699c03;
+}
+
 .container {
   max-width: 950px;
+}
+
+.row {
+  min-width: 100%;
 }
 
 section {
@@ -22,7 +48,7 @@ section {
 }
 
 header ~ section .container .row:first-of-type i {
-  background: #699c03;
+  background: #98cb32;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -38,6 +64,23 @@ header ~ section .container .row:first-of-type i {
   text-align: center;
   top: -2px;
   width: 36px;
+}
+
+header ~ section .container .row h2:first-of-type:hover i {
+  background: #699c03;
+  font-size: 28px;
+  height: 40px;
+  margin-right: 8px;
+  padding-top: 2px;
+  vertical-align: -2px;
+  width: 40px;
+  text-shadow: 0;
+}
+
+header ~ section .container .row h2:first-of-type:hover,
+header ~ section .container .row h3.page-header:hover {
+  color: #fff;
+  text-shadow: 0 1px 0 #CCC, 0 2px 0 #C9C9C9, 0 3px 0 #BBB, 0 4px 0 #B9B9B9, 0 5px 0 #AAA, 0 6px 1px rgba(0,0,0,.1), 0 0px 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 }
 
 /* - [  Header ] - */
@@ -76,11 +119,68 @@ header ~ section .container .row:first-of-type i {
   color: #fff;
 }
 
+/* - [ Skills ]  - */
+
+#skills-h3 {
+  padding-left:30px;
+  position:relative;
+}
+
+#skills-h3 i {
+  position:absolute;
+  margin-right: 8px;
+  -webkit-transition: all 3s linear;
+  -moz-transition: all 3s linear;
+  -ms-transition: all 3s linear;
+  -o-transition: all 3s linear;
+  transition: all 3s linear;
+  left:0;
+}
+
+#skills-h3:hover i {
+  transform:translateY(-300px) rotate(-45deg);
+  position: absolute;
+}
+
 /* - [ Work ] - */
+.work-entry {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.work-entry:last-of-type {
+  padding-bottom: 0;
+}
+
+.work-entry:after {
+  background: -webkit-gradient(linear,left top,right top,color-stop(0%,rgba(255,255,255,0)),color-stop(25%,rgba(204,204,204,1)),color-stop(74%,rgba(204,204,204,1)),color-stop(100%,rgba(255,255,255,0)));
+  background: -webkit-linear-gradient(left,rgba(255,255,255,0)0%,rgba(204,204,204,1)25%,rgba(204,204,204,1)74%,rgba(255,255,255,0)100%);
+  background: -moz-linear-gradient(left,rgba(255,255,255,0)0%,rgba(204,204,204,1)25%,rgba(204,204,204,1)75%,rgba(255,255,255,0)100%);
+  background: linear-gradient(to right,rgba(255,255,255,0)0%,rgba(204,204,204,1)25%,rgba(204,204,204,1)74%,rgba(255,255,255,0)100%);
+  background: -ms-linear-gradient(left,rgba(255,255,255,0)0%,rgba(204,204,204,1)25%,rgba(204,204,204,1)74%,rgba(255,255,255,0)100%);
+  background: -o-linear-gradient(left,rgba(255,255,255,0)0%,rgba(204,204,204,1)25%,rgba(204,204,204,1)74%,rgba(255,255,255,0)100%);
+  border: 0;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.work-entry:last-of-type:after {
+  background: none;
+}
+
 .work-entry .column-1 img {
   max-height: 140px;
   width: 100%;
   max-width: 170px;
+}
+
+.work-entry h4 small {
+  margin-left: 8px;
 }
 
 /* - [ Projects ] - */
@@ -102,6 +202,25 @@ header ~ section .container .row:first-of-type i {
   height: 400px;
   width: 100%;
   padding-bottom: 5%;
+}
+
+/* -- [ Footer ] -- */
+
+footer {
+  position: relative;
+  padding: 40px 0;
+  margin-bottom: 0;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+  background: #699c03; /* Old browsers */
+  background: -moz-linear-gradient(left, #699c03 0%, #98cb32 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#699c03), color-stop(100%,#98cb32)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #699c03 0%,#98cb32 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #699c03 0%,#98cb32 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #699c03 0%,#98cb32 100%); /* IE10+ */
+  background: linear-gradient(to right, #699c03 0%,#98cb32 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#699c03', endColorstr='#98cb32',GradientType=1 ); /* IE6-9 */     -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+  box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
 }
 
 /*.flex-box {*/

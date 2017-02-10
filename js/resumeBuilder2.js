@@ -254,7 +254,7 @@ function displayWork() {
         var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
         $(".work-entry:last .work-link").append(formattedEmployer);
         var formattedDates = HTMLworkDates.replace("%data%", job.dates);
-        $(".work-entry:last .column-2").append(formattedDates);
+        $(".work-entry:last .work-link").after(formattedDates);
         var formattedWorkLocation = HTMLworkLocation.replace("%data%", job.location);
         $(".work-entry:last .column-2").append(formattedWorkLocation);
         var formattedWorkDescription = HTMLworkDescription.replace("%data%", job.description);
