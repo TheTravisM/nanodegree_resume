@@ -4,56 +4,63 @@ replace the %data% placeholder text you see in them.
 */
 // Header
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr>';
+var HTMLheaderRole = '<p>%data%</p><ul id="topContacts" class="list-unstyled"></ul>';
 
 // Contacts
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+//var HTMLcontactStart = '';
+var HTMLcontactGeneric = '<li class="flex-item">%contact% <span>%data%</span></li>';
+var HTMLmobile = '<li class="flex-item mobile"><i class="fa fa-phone" aria-hidden="true"></i>mobile: <a href="tel:%data%"></a></li>';
+var HTMLemail = '<li class="flex-item email"><i class="fa fa-envelope" aria-hidden="true"></i>email: <a href="mailto: %data%"></a>';
+var HTMLtwitter = '<li class="flex-item twitter"><i class="fa fa-twitter" aria-hidden="true"></i>twitter: <a href="%data%"></a></li>';
+var HTMLgithub = '<li class="flex-item github"><i class="fa fa-github" aria-hidden="true"></i>github: <a href="%data%"></a></li>';
+var HTMLlinkedin = '<li class="flex-item linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i>linkedin: <a href="%data%"></a></li>';
+var HTMLblog = '<li class="flex-item blog"><i class="fa fa-globe" aria-hidden="true"></i>blog: <span>%data%</span></li>';
+var HTMLlocation = '<li class="flex-item location"><i class="fa fa-globe" aria-hidden="true"></i>location: <span>%data%</span></li>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic">';
+var HTMLbioPic = '<img src="%data%" class="biopic img-responsive img-circle">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 // Skills
-var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLskillsStart = '<h3 id="skills-h3"><i class="fa fa-rocket" aria-hidden="true"></i>Skills at a Glance</h3><ul id="skills" class="list-unstyled"></ul>';
+var HTMLskills = '<li>%data%</li>';
 
 // Work
-var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
+var HTMLworkStart = '<div class="row work-entry">' +
+    '<div class="col-sm-2 column-1"></div>' +
+    '<div class="col-sm-10 column-2"></div>' +
+    '</div>';
+var HTMLworkLogo = '<img src="%data%" class="img-responsive center-block">';
+var HTMLworkTitle = '<h3>%data%</h3>';
+var HTMLworkURL = '<h4><a class="work-link" href="%data%"></a></h4>';
+var HTMLworkEmployer = '%data%';
+var HTMLworkDates = '<small class="date-text">%data%</small>';
+var HTMLworkLocation = '<p class="location-text">%data%</p>';
+var HTMLworkDescription = '<p>%data%</p>';
 
 // Projects
-var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectUrl = '<h3 class="project-title"><a href="%data%"></a></h3>';
-var HTMLprojectTitle = '%data%';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
+var HTMLprojectStart = '<div class="row project-entry"></div>';
+var HTMLprojectUrl = '<div class="col-md-12"><h3 class="project-title"><a href="%data%"></a></h3></div>';
+var HTMLprojectTitle = '%data% ';
+var HTMLprojectDates = '<small class="date-text"> - %data%</small>';
+var HTMLprojectImage = '<div class="project-img col-md-4 col-sm-6 col-xs-12"><img src="%data%"></div>';
+var HTMLprojectDescription = '<div class="project-description col-md-12 col-xs-12"><p>%data%</p></div>';
 var HTMLprojectGitHub = '<a href="%data%" class="github-link">GitHub Link</a>';
-var HTMLprojectImage = '<img src="%data%">';
 
 // Education
-var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
-var HTMLschoolDates = '<div class="date-text">%data%</div>';
+var HTMLschoolStart = '<div class="education-entry col-md-12"></div>';
+var HTMLschoolName = '<h3><a href="#">%data%</a></h3>';
+var HTMLschoolDegree = '<h4>%data%</h4>';
+var HTMLschoolDates = '<time class="date-text">%data%</time>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><br>Major: %data%</em>';
-var HTMLschoolMinor = '<em><br>Minor: %data%</em>';
+var HTMLschoolMajor = '<em>Major: %data%</em><br>';
+var HTMLschoolMinor = '<em>Minor: %data%</em><br>';
 
 // Online Classes
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
+var HTMLonlineClasses = '<h3 class="title page-header"><i class="fa fa-wifi" aria-hidden="true"></i>Online Classes</h3>';
 var HTMLonlineURL = '<h4 class="online-title"><a href="%data%"></a></h4>';
 var HTMLonlineTitle = '%data%';
 var HTMLonlineSchool = '<p>%data%</p>';
-var HTMLonlineDates = '<div class="date-text">%data%</div>';
+var HTMLonlineDates = '<time class="date-text">%data%</time>';
 
 
 var internationalizeButton = '<button>Internationalize</button>';
@@ -238,7 +245,7 @@ Uncomment the code below when you're ready to implement a Google Map!
 */
 
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
