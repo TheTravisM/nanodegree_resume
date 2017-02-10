@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f309d24f-7481-4388-9bf4-d945a7d3bdc5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/helper2.js" afterPath="$PROJECT_DIR$/js/helper2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/resumeBuilder2.js" afterPath="$PROJECT_DIR$/js/resumeBuilder2.js" />
-    </list>
+    <list default="true" id="f309d24f-7481-4388-9bf4-d945a7d3bdc5" name="Default" comment="" />
     <ignored path="nanodegree_resume.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -156,10 +152,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="1912" />
+    <option name="y" value="-437" />
+    <option name="width" value="1096" />
+    <option name="height" value="1896" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -639,15 +635,15 @@
       <option name="presentableId" value="Default" />
       <updated>1486133655218</updated>
       <workItem from="1486133656952" duration="21015000" />
-      <workItem from="1486587320928" duration="20790000" />
+      <workItem from="1486587320928" duration="20793000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41805000" />
+    <option name="totallyTimeSpent" value="41808000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="1912" y="-437" width="1096" height="1896" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
