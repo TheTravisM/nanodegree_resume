@@ -125,7 +125,7 @@ var education = {
             "name" : "Mount Saint Joseph",
             "location" : "Cincinnati, OH",
             "degree": "BFA",
-            "dates": '1998',
+            "dates": "2005-2008",
             "url": "http://www.msj.edu/",
             "majors": ["Fine Arts Graphic Design"],
             "minors": ["Illustration", "iDesign"]
@@ -133,6 +133,7 @@ var education = {
         {
             "name" : "University Cincinnati",
             "location" : "Cincinnati, OH",
+            "dates": "2016",
             "degree": "BFA",
             "majors": ["Fine Arts Graphic Design"],
             "minors": ["Illustration", "iDesign"]
@@ -332,4 +333,3 @@ education.display();
 
 // -- [ Google Map
 $("#mapDiv").append(googleMap);
-

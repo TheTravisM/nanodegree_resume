@@ -56,7 +56,7 @@ var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 var HTMLschoolMinor = '<em><br>Minor: %data%</em>';
 
 // Online Classes
-var HTMLonlineClasses = '<h3 class="page-header"><i class="fa fa-wifi" aria-hidden="true"></i>Online Classes</h3>';
+var HTMLonlineClasses = '<h3 class="title page-header"><i class="fa fa-wifi" aria-hidden="true"></i>Online Classes</h3>';
 var HTMLonlineURL = '<h4 class="online-title"><a href="%data%"></a></h4>';
 var HTMLonlineTitle = '%data%';
 var HTMLonlineSchool = '<p>%data%</p>';
