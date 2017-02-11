@@ -1,153 +1,156 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<!-- This tells the browser how to read the document. -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- This tells the browser how to read the document. -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<!-- Bootstrap 3 CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap 3 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
-	<!-- Google Maps -->
-	<script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCP9xQI8pMZ78A-U0C_wJJWQ-k4RxuWlpI"></script>
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
+    <!-- Google Maps -->
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCP9xQI8pMZ78A-U0C_wJJWQ-k4RxuWlpI"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
-	<!-- Favicons -->
-	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicons/apple-touch-icon-144x144.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicons/apple-touch-icon-60x60.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicons/apple-touch-icon-120x120.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicons/apple-touch-icon-76x76.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicons/apple-touch-icon-152x152.png" />
-	<link rel="icon" type="image/png" href="images/favicons/favicon-196x196.png" sizes="196x196" />
-	<link rel="icon" type="image/png" href="images/favicons/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32" />
-	<link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16" />
-	<link rel="icon" type="image/png" href="images/favicons/favicon-128.png" sizes="128x128" />
-	<meta name="application-name" content="&nbsp;"/>
-	<meta name="msapplication-TileColor" content="#FFFFFF" />
-	<meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png" />
-	<meta name="msapplication-square70x70logo" content="images/facicon/mstile-70x70.png" />
-	<meta name="msapplication-square150x150logo" content="images/facicon/mstile-150x150.png" />
-	<meta name="msapplication-wide310x150logo" content="images/favicons/mstile-310x150.png" />
-	<meta name="msapplication-square310x310logo" content="images/favicons/mstile-310x310.png" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicons/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="images/favicons/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="images/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/favicons/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="images/facicon/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="images/facicon/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="images/favicons/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="images/favicons/mstile-310x310.png" />
 
-	<title>Travis Mikolay Resume</title>
+    <title>Travis Mikolay Resume</title>
 </head>
+
 <body>
-<!-- [ Header ] -->
-<header id="header" class="jumbotron">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3 column-1"></div>
-			<div class="col-md-6 bio">
-			</div>
-			<div class="col-md-3 skills"></div>
-		</div>
-	</div>
-</header>
+    <!-- [ Header ] -->
+    <header id="header" class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 column-1"></div>
+                <div class="col-md-6 bio">
+                </div>
+                <div class="col-md-3 skills"></div>
+            </div>
+        </div>
+    </header>
 
-<main>
-	<!-- [ Work ] -->
-	<section id="workExperience">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h2 class="title"><i class="fa fa-briefcase" aria-hidden="true"></i> Work Experience</h2>
-				</div>
-			</div>
-		</div>
-	</section>
+    <main>
+        <!-- [ Work ] -->
+        <section id="workExperience">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="title"><i class="fa fa-briefcase" aria-hidden="true"></i> Work Experience</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	<!-- [ Projects ] -->
-	<section id="projects">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h2 class="title"><i class="fa fa-archive" aria-hidden="true"></i> Projects</h2>
-				</div>
-			</div>
-		</div>
-	</section>
+        <!-- [ Projects ] -->
+        <section id="projects">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="title"><i class="fa fa-archive" aria-hidden="true"></i> Projects</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	<!-- [ Education ] -->
-	<section id="education">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h2 class="title"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Education</h2>
-				</div>
-			</div>
-		</div>
-	</section>
+        <!-- [ Education ] -->
+        <section id="education">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="title"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Education</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	<!-- [ MAP ] -->
-	<section id="google-map">
-		<div id="mapDiv"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h2 class="title"><i class="fa fa-map-marker" aria-hidden="true"></i> Where I have Lived and Worked</h2>
-				</div>
-			</div>
-		</div>
-	</section>
-</main>
-<!-- [ Footer ] -->
-<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h2 class="title">Lets Connect</h2>
-				<ul id="lets-connect" class="list-unstyled"></ul>
-			</div>
-		</div>
-	</div>
-</footer>
+        <!-- [ MAP ] -->
+        <section id="google-map">
+            <div id="mapDiv"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="title"><i class="fa fa-map-marker" aria-hidden="true"></i> Where I have Lived and Worked</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- [ Footer ] -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="title">Lets Connect</h2>
+                    <ul id="lets-connect" class="list-unstyled"></ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<!-- "HTML is loaded by the browser in the order it appears in the file. If the JavaScript is loaded first and it is supposed to affect the HTML below it, it might not work, as the JavaScript would be loaded before the HTML it is supposed to work on. Therefore, putting JavaScript near the bottom of the HTML page is often the best strategy."
+    <!-- "HTML is loaded by the browser in the order it appears in the file. If the JavaScript is loaded first and it is supposed to affect the HTML below it, it might not work, as the JavaScript would be loaded before the HTML it is supposed to work on. Therefore, putting JavaScript near the bottom of the HTML page is often the best strategy."
 https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics -->
 
-<!-- "Javascript assets, by default, tend to block any other parallel downloads from occurring. So, you can imagine if you have plenty of <script> tags in the head, calling on multiple external scripts will block the HTML from loading, thus greeting the user with a blank white screen, because no other content on your page will load until the JS files have completely loaded."
+    <!-- "Javascript assets, by default, tend to block any other parallel downloads from occurring. So, you can imagine if you have plenty of <script> tags in the head, calling on multiple external scripts will block the HTML from loading, thus greeting the user with a blank white screen, because no other content on your page will load until the JS files have completely loaded."
  http://stackoverflow.com/questions/4396849/does-the-script-tag-position-in-html-affects-performance-of-the-webpage -->
-<script src="js/jQuery.js"></script>
-<script src="js/helper.js"></script>
-<script src="js/resumeBuilder.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/helper.js"></script>
+    <script src="js/resumeBuilder.js"></script>
 
-<script>
-	if(document.getElementsByClassName('flex-item').length === 0) {
-		document.getElementById('topContacts').style.display = 'none';
-	}
-	if(document.getElementsByTagName('h1').length === 0) {
-		document.getElementById('header').style.display = 'none';
-	}
-	if(document.getElementsByClassName('work-entry').length === 0) {
-		document.getElementById('workExperience').style.display = 'none';
-	}
-	if(document.getElementsByClassName('project-entry').length === 0) {
-		document.getElementById('projects').style.display = 'none';
-	}
-	if(document.getElementsByClassName('education-entry').length === 0) {
-		document.getElementById('education').style.display = 'none';
-	}
-	if(document.getElementsByClassName('flex-item').length === 0) {
-		document.getElementById('lets-connect').style.display = 'none';
-	}
-	if(document.getElementById('map') === null) {
-		document.getElementById('mapDiv').style.display = 'none';
-	}
-</script>
+    <script>
+        if (document.getElementsByClassName('flex-item').length === 0) {
+            document.getElementById('topContacts').style.display = 'none';
+        }
+        if (document.getElementsByTagName('h1').length === 0) {
+            document.getElementById('header').style.display = 'none';
+        }
+        if (document.getElementsByClassName('work-entry').length === 0) {
+            document.getElementById('workExperience').style.display = 'none';
+        }
+        if (document.getElementsByClassName('project-entry').length === 0) {
+            document.getElementById('projects').style.display = 'none';
+        }
+        if (document.getElementsByClassName('education-entry').length === 0) {
+            document.getElementById('education').style.display = 'none';
+        }
+        if (document.getElementsByClassName('flex-item').length === 0) {
+            document.getElementById('lets-connect').style.display = 'none';
+        }
+        if (document.getElementById('map') === null) {
+            document.getElementById('mapDiv').style.display = 'none';
+        }
+    </script>
 </body>
+
 </html>
