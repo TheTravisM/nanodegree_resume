@@ -4,16 +4,16 @@ replace the %data% placeholder text you see in them.
 */
 // Header
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<p>%data%</p><ul id="topContacts" class="list-unstyled"></ul>';
+var HTMLheaderRole = '<h3 class="sub-title">%data%</h3><ul id="topContacts" class="list-unstyled"></ul>';
 
 // Contacts
 //var HTMLcontactStart = '';
 var HTMLcontactGeneric = '<li class="flex-item">%contact% <span>%data%</span></li>';
-var HTMLmobile = '<li class="flex-item mobile"><i class="fa fa-phone" aria-hidden="true"></i>mobile: <a href="tel:%data%"></a></li>';
+var HTMLmobile = '<li class="flex-item mobile"><i class="fa fa-phone" aria-hidden="true"></i>mobile: <a target="_blank" href="tel:%data%"></a></li>';
 var HTMLemail = '<li class="flex-item email"><i class="fa fa-envelope" aria-hidden="true"></i>email: <a href="mailto: %data%"></a>';
-var HTMLtwitter = '<li class="flex-item twitter"><i class="fa fa-twitter" aria-hidden="true"></i>twitter: <a href="%data%"></a></li>';
-var HTMLgithub = '<li class="flex-item github"><i class="fa fa-github" aria-hidden="true"></i>github: <a href="%data%"></a></li>';
-var HTMLlinkedin = '<li class="flex-item linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i>linkedin: <a href="%data%"></a></li>';
+var HTMLtwitter = '<li class="flex-item twitter"><i class="fa fa-twitter" aria-hidden="true"></i>twitter: <a target="_blank" href="%data%"></a></li>';
+var HTMLgithub = '<li class="flex-item github"><i class="fa fa-github" aria-hidden="true"></i>github: <a target="_blank" href="%data%"></a></li>';
+var HTMLlinkedin = '<li class="flex-item linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i>linkedin: <a target="_blank" href="%data%"></a></li>';
 var HTMLblog = '<li class="flex-item blog"><i class="fa fa-globe" aria-hidden="true"></i>blog: <span>%data%</span></li>';
 var HTMLlocation = '<li class="flex-item location"><i class="fa fa-globe" aria-hidden="true"></i>location: <span>%data%</span></li>';
 
@@ -31,7 +31,7 @@ var HTMLworkStart = '<div class="row work-entry">' +
     '</div>';
 var HTMLworkLogo = '<img src="%data%" class="img-responsive center-block">';
 var HTMLworkTitle = '<h3>%data%</h3>';
-var HTMLworkURL = '<h4><a class="work-link" href="%data%"></a></h4>';
+var HTMLworkURL = '<h4><a class="work-link" target="_blank" href="%data%"></a></h4>';
 var HTMLworkEmployer = '%data%';
 var HTMLworkDates = '<small class="date-text">%data%</small>';
 var HTMLworkLocation = '<p class="location-text">%data%</p>';
@@ -39,16 +39,16 @@ var HTMLworkDescription = '<p>%data%</p>';
 
 // Projects
 var HTMLprojectStart = '<div class="row project-entry"></div>';
-var HTMLprojectUrl = '<div class="col-md-12"><h3 class="project-title"><a href="%data%"></a></h3></div>';
+var HTMLprojectUrl = '<div class="col-md-12"><h3 class="project-title"><a target="_blank" href="%data%"></a></h3></div>';
 var HTMLprojectTitle = '%data% ';
 var HTMLprojectDates = '<small class="date-text"> - %data%</small>';
 var HTMLprojectImage = '<div class="project-img col-md-4 col-sm-6 col-xs-12"><img src="%data%"></div>';
 var HTMLprojectDescription = '<div class="project-description col-md-12 col-xs-12"><p>%data%</p></div>';
-var HTMLprojectGitHub = '<a href="%data%" class="github-link">GitHub Link</a>';
+var HTMLprojectGitHub = '<a target="_blank" href="%data%" class="github-link">GitHub Link</a>';
 
 // Education
 var HTMLschoolStart = '<div class="education-entry col-md-12"></div>';
-var HTMLschoolName = '<h3><a href="#">%data%</a></h3>';
+var HTMLschoolName = '<h3><a target="_blank" href="#">%data%</a></h3>';
 var HTMLschoolDegree = '<h4>%data%</h4>';
 var HTMLschoolDates = '<time class="date-text">%data%</time>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
@@ -57,11 +57,10 @@ var HTMLschoolMinor = '<em>Minor: %data%</em><br>';
 
 // Online Classes
 var HTMLonlineClasses = '<h3 class="title page-header"><i class="fa fa-wifi" aria-hidden="true"></i>Online Classes</h3>';
-var HTMLonlineURL = '<h4 class="online-title"><a href="%data%"></a></h4>';
+var HTMLonlineURL = '<h4 class="online-title"><a target="_blank" href="%data%"></a></h4>';
 var HTMLonlineTitle = '%data%';
 var HTMLonlineSchool = '<p>%data%</p>';
 var HTMLonlineDates = '<time class="date-text">%data%</time>';
-
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';

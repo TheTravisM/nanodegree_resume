@@ -88,9 +88,9 @@ var projects = {
             "github": "https://github.com/KickAssBrockSamson/AngularJS-HealthCare-UI",
             "url": "https://github.com/KickAssBrockSamson/AngularJS-HealthCare-UI",
             "images" : [
-                "https://placehold.it/350x150",
-                "https://placehold.it/350x150",
-                "https://placehold.it/350x150"
+                "images/projects/Cappadocia-Turkey-Zeki-Seferoglu.jpg",
+                "images/projects/Fairy-Tale-İlhan-Eroglu.jpg",
+                "images/projects/Lake-Tekapo-New-Zealand-Christian-Lim.jpg"
             ]
         },
         {
@@ -100,9 +100,9 @@ var projects = {
             "github" : "https://github.com/KickAssBrockSamson/Functional-Design-Workbench",
             "url" : "http://kickassbrocksamson.github.io/Functional-Design-Workbench/#/",
             "images" : [
-                "https://placehold.it/350x150",
-                "https://placehold.it/350x150",
-                "https://placehold.it/350x150"
+                "images/projects/Li-Jiang-China-Trey-Ratcliff.jpg",
+                "images/projects/Lichtenstein-Castle-Germany-Martin.jpg",
+                "images/projects/Machu-Picchu-Peru-Piotr-Kulczycki.jpg"
             ]
         },
         {
@@ -112,9 +112,9 @@ var projects = {
             "github" : "https://github.com/KickAssBrockSamson/Web-Development-Guidelines",
             "url" : "http://kickassbrocksamson.github.io/Web-Development-Guidelines/",
             "images" : [
-                "https://placehold.it/350x150",
-                "https://placehold.it/350x150",
-                "https://placehold.it/350x150"
+                "images/projects/Paptsdorf-Germany-skoeber.jpg",
+                "images/projects/Rio-de-Janeiro-Brazil-airpano.jpg",
+                "images/projects/Cappadocia-Turkey-Zeki-Seferoglu.jpg"
             ]
         }
 
@@ -282,6 +282,8 @@ projects.display = function() {
             project.images.forEach(function(image){
                 var formattedImage = HTMLprojectImage.replace("%data%", image);
                 $(".project-entry:last").append(formattedImage);
+                var formattedImageAlt = image.slice(16);
+                $('.project-img:last img:not([alt])').attr('alt', formattedImageAlt);
             });
         }
         var formattedDescription = HTMLprojectDescription.replace("%data%", project.description);
@@ -353,4 +355,3 @@ $("#lets-connect").append(formattedHTMLgithub);
 $("#lets-connect li.github a:last").append(bio.contacts.github);
 var formattedHTMLlocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#lets-connect").append(formattedHTMLlocation);
-

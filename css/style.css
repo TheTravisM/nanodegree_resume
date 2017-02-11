@@ -116,14 +116,14 @@ main .title:hover {
   box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
 }
 
-.jumbotron h1 {
+.jumbotron h1,
+.sub-title {
   margin-top: 0;
 }
 
 .jumbotron h3 {
   color: #fff;
 }
-
 
 .biopic {
   margin: 0 auto;
