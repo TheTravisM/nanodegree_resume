@@ -31,16 +31,14 @@ var HTMLworkStart = '<div class="row work-entry">' +
     '</div>';
 var HTMLworkLogo = '<img src="%data%" class="img-responsive center-block">';
 var HTMLworkTitle = '<h3>%data%</h3>';
-var HTMLworkURL = '<h4><a class="work-link" target="_blank" href="%data%"></a></h4>';
-var HTMLworkEmployer = '%data%';
+var HTMLworkEmployer = '<h4><a class="work-link" target="_blank" href="#">%data%</a></h4>';
 var HTMLworkDates = '<small class="date-text">%data%</small>';
 var HTMLworkLocation = '<p class="location-text">%data%</p>';
 var HTMLworkDescription = '<p>%data%</p>';
 
 // Projects
 var HTMLprojectStart = '<div class="row project-entry"></div>';
-var HTMLprojectUrl = '<div class="col-md-12"><h3 class="project-title"><a target="_blank" href="%data%"></a></h3></div>';
-var HTMLprojectTitle = '%data% ';
+var HTMLprojectTitle = '<div class="col-md-12"><h3 class="project-title"><a target="_blank" href="#">%data%</a></h3></div>';
 var HTMLprojectDates = '<small class="date-text"> - %data%</small>';
 var HTMLprojectImage = '<div class="project-img col-md-4 col-sm-6 col-xs-12"><img src="%data%"></div>';
 var HTMLprojectDescription = '<div class="project-description col-md-12 col-xs-12"><p>%data%</p></div>';
