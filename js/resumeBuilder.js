@@ -245,12 +245,12 @@ bio.display();
 work.display = function() {
     work.jobs.forEach(function(job) {
         $("#workExperience .container").append(HTMLworkStart);
-        var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
-        $(".work-entry:last .column-2").append(formattedTitle);
         var formattedLogo = HTMLworkLogo.replace("%data%", job.logo);
         $(".work-entry:last .column-1").append(formattedLogo);
+        var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
+        $(".work-entry:last .column-2").append(formattedTitle);
         var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer).replace("#", job.url);
-        $(".work-entry:last").append(formattedEmployer);
+        $(".work-entry:last .column-2").append(formattedEmployer);
         var formattedDates = HTMLworkDates.replace("%data%", job.dates);
         $(".work-entry:last .work-link").after(formattedDates);
         var formattedWorkLocation = HTMLworkLocation.replace("%data%", job.location);
